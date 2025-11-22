@@ -5,10 +5,12 @@ import QZone from "./QZone";
 
 const RightAside = () => {
   return (
-    <div className="space-y-8">
-      <SocialLogin></SocialLogin>
-      <FindUs></FindUs>
-      <QZone></QZone>
+    <div className="space-y-6 px-2 md:px-0">
+      <div className="sticky top-4 space-y-6">
+        <SocialLogin />
+        <FindUs />
+        <QZone />
+      </div>
     </div>
   );
 };

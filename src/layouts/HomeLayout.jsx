@@ -10,26 +10,33 @@ import Loading from "../pages/Loading";
 const HomeLayout = () => {
   const { state } = useNavigation();
   return (
-    <div>
-      <header>
+    <div className="min-h-screen bg-transparent">
+      <header className="bg-transparent">
         {import.meta.env.VITE_name}
-        <Header></Header>
-        <section className="w-11/12 mx-auto my-3">
-          <LatestNews></LatestNews>
-        </section>
-        <nav className="w-11/12 mx-auto my-3">
-          <Navbar></Navbar>
-        </nav>
+        <div className="w-full max-w-6xl mx-auto px-4">
+          <Header />
+          <div className="mt-3">
+            <LatestNews />
+          </div>
+          <div className="mt-3">
+            <Navbar />
+          </div>
+        </div>
       </header>
-      <main className="w-11/12 mx-auto my-3  grid grid-cols-12 gap-5">
-        <aside className="col-span-3 sticky top-0 h-fit">
-          <LeftAside></LeftAside>
+
+      <main className="w-full max-w-6xl mx-auto mt-4 px-4 grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <aside className="hidden lg:block lg:col-span-3 sticky top-4 self-start">
+          <LeftAside />
         </aside>
-        <section className="main col-span-6">
-          {state == "loading" ? <Loading></Loading> : <Outlet></Outlet>}
+
+        <section className="col-span-1 lg:col-span-6">
+          <div className="py-2">
+            {state === "loading" ? <Loading /> : <Outlet />}
+          </div>
         </section>
-        <aside className="col-span-3 sticky top-0 h-fit">
-          <RightAside></RightAside>
+
+        <aside className="hidden lg:block lg:col-span-3 sticky top-4 self-start">
+          <RightAside />
         </aside>
       </main>
     </div>
