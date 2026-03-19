@@ -1,12 +1,54 @@
-# React + Vite
+# Dragon News — Real-Time News Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dragon News is a dynamic, high-performance news aggregation platform. It features category-based news filtering, detailed article views and a classic editorial layout. Designed to provide a seamless reading experience across all devices.
 
-Currently, two official plugins are available:
+**Live Demo: https://dragon-news-react-app.netlify.app/**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Category Navigation:** Seamlessly switch between news categories (Breaking News, Regular News, International, Sports etc.).
+* **Dynamic Article Feed:** Real-time rendering of news cards with author details, view counts and ratings.
+* **Detailed News View:** Dedicated routes for full-length articles with high-resolution imagery and related content.
+* **Classic Editorial Layout:** Traditional three-column layout (Categories | Main Feed | Social Login & Tags) optimized for readability.
+* **User Authentication:** (If implemented) Secure login and registration integration for personalized news access.
+* **Social Integration:** Quick links to social media profiles and "Find Us On" sections.
+* **Responsive & Fast:** Built for speed and fully optimized for mobile, tablet and desktop devices.
+
+---
+
+## Technologies
+
+| Technology | Purpose |
+| :--- | :--- |
+| **React** | Core library for building the component-based UI |
+| **React Router** | Handling dynamic routing for categories and news details |
+| **Firebase** | (Commonly used) Authentication and hosting services |
+| **Tailwind CSS** | Styling the editorial layout and responsive grid |
+| **DaisyUI** | UI components for buttons, inputs and cards |
+| **React Icons** | Providing professional iconography for news meta-data |
+| **Moment.js** | Formatting publication dates and time-stamps |
+| **Netlify** | Fast and reliable production deployment |
+
+---
+
+## Project Structure
+
+```text
+src/
+├── assets/               # Brand logos and placeholder images
+├── components/           # Reusable UI elements
+│   ├── Header/           # Branding and date display
+│   ├── Navbar/           # Primary navigation links
+│   ├── LeftNav/          # Category listing and filtering
+│   ├── RightNav/         # Social login and advertisement sections
+│   └── NewsCard/         # Individual news summary component
+├── pages/                # Page-level components
+│   ├── Category/         # Feed filtered by category
+│   ├── NewsDetail/       # Full article view
+│   ├── Login/            # User authentication page
+│   └── Register/         # Account creation page
+├── routes/               # Centralized router configuration
+├── App.jsx               # Root component
+└── main.jsx              # Entry point
